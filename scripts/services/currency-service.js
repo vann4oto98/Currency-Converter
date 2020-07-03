@@ -51,11 +51,9 @@ function init() {
             }
 
         }).catch(console.error);
-
-
 }
-
 init();
+
 
 function getRatesByDate(date) {
 

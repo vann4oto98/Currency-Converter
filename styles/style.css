@@ -108,3 +108,56 @@ input:focus,
 button:focus {
 	outline: 0
 }
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+	background-color: rgba(120, 65, 209, 0.404);
+	overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+	background-color: #ddd;
+	color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+	background-color: #f59300;
+	color: white;
+  }
+
+  .definition {
+	  width: 50%;
+	  border: 3px solid #f59300;
+	  padding: 10px;
+	  text-align: center;
+  }
+
+  /* Table  */
+  th {
+	background-color: #4CAF50;
+	color: white;
+  }
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+  }
+
+  th, td {
+	padding: 15px;
+  }
