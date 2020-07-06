@@ -1,163 +1,187 @@
 * {
-	font-size: 18px;
-	box-sizing: border-box;
-	font-family: 'Apple Chancery', cursive
+  font-size: 18px;
+  box-sizing: border-box;
+  font-family: "Apple Chancery", cursive;
 }
 
 body {
-	background: linear-gradient(to bottom, #aff2ff 0%, #aff2ff 46%, #50dcff 54%, #50dcff 95%);
-	font-family: 'Avantgarde', sans-serif;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
+  background: linear-gradient(
+    to bottom,
+    #aff2ff 0%,
+    #aff2ff 46%,
+    #50dcff 54%,
+    #50dcff 95%
+  );
+  font-family: "Avantgarde", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-
 #main-heading {
-	font-size: 30px;
-	margin: 30px;
-	vertical-align: middle;
+  font-size: 30px;
+  margin: 30px;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .currency {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .date {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .date select {
-	width: 150px;
-	height: 40px;
-	margin: 10px;
+  width: 150px;
+  height: 40px;
+  margin: 10px;
 }
 
 .currency select {
-	background: transparent;
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-	background-repeat: no-repeat, repeat;
-	background-position: right .2em top 50%, 0 0;
-	background-size: .50em auto, 100%;
-	border: 0;
-	padding-right: 20px;
-	font-size: 22px;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.2em top 50%, 0 0;
+  background-size: 0.5em auto, 100%;
+  border: 0;
+  padding-right: 20px;
+  font-size: 22px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .currency input {
-	border: 2px solid black;
-	border-radius: 20px;
-	padding: 5px;
-	margin-left: 10px;
-	background: transparent;
-	font-size: 22px;
-	text-align: right;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 5px;
+  margin-left: 10px;
+  background: transparent;
+  font-size: 22px;
+  text-align: right;
 }
 
 .middle {
-	color: #f59300;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+  color: #f59300;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .middle button {
-	background-color: #fff;
-	border: 2px solid #ecf0f1;
-	border-radius: 50%;
-	cursor: pointer;
-	color: #f59300;
-	font-size: 18px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 30px;
-	width: 30px;
-	transform: rotate(90deg);
+  background-color: #fff;
+  border: 2px solid #ecf0f1;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #f59300;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  transform: rotate(90deg);
 }
 
 .middle button:active {
-	transform: rotate(90deg) scale(0.9);
+  transform: rotate(90deg) scale(0.9);
 }
 
 .middle .rate {
-	background-color: #fff;
-	border: 2px solid #ecf0f1;
-	border-radius: 50px;
-	font-size: 18px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 30px;
-	padding: 0 10px;
-	margin: 30px 15px 30px 25px;
+  background-color: #fff;
+  border: 2px solid #ecf0f1;
+  border-radius: 50px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 10px;
+  margin: 30px 15px 30px 25px;
 }
 
 select:focus,
 input:focus,
 button:focus {
-	outline: 0
+  outline: 0;
 }
-
 
 /* Add a black background color to the top navigation */
 .topnav {
-	background-color: rgba(120, 65, 209, 0.404);
-	overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-	background-color: #ddd;
-	color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-	background-color: #f59300;
-	color: white;
-  }
+  background-color: rgba(120, 65, 209, 0.404);
+  overflow: hidden;
+}
 
-  .definition {
-	  width: 50%;
-	  border: 3px solid #f59300;
-	  padding: 10px;
-	  text-align: center;
-  }
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-  /* Table  */
-  th {
-	background-color: #4CAF50;
-	color: white;
-  }
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
-  tr:nth-child(even) {background-color: #f2f2f2;}
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #f59300;
+  color: white;
+}
 
-  table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-  }
+.definition {
+  width: 50%;
+  border: 3px solid #f59300;
+  padding: 10px;
+  text-align: center;
+}
 
-  th, td {
-	padding: 15px;
-  }
+/* Table  */
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+/* about */
+
+#aboutDiv {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 250px;
+  margin-left: 320px;
+  text-shadow: 2px 2px 5px #f59300;
+}
+
+#devCampPar {
+  text-align: center;
+}
