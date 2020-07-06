@@ -5,7 +5,7 @@ import {
     domInit
 } from "./dom-service.js"
 
-function init() {
+export function init() {
 
     const mainRatesSource = {};
 
@@ -52,7 +52,6 @@ function init() {
 
         }).catch(console.error);
 }
-init();
 
 
 function getRatesByDate(date) {
