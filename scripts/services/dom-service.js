@@ -41,8 +41,8 @@ const rateEl = document.getElementById("rate");
 const exchange = document.getElementById("exchange");
 
 from_currencyEl.addEventListener("change", () => {calculate(); makeChart();});
-from_ammountEl.addEventListener("input", () => {calculate(); makeChart();});
-to_currencyEl.addEventListener("change", calculate);
+from_ammountEl.addEventListener("input", calculate);
+to_currencyEl.addEventListener("change", () => {calculate(); makeChart();});
 to_ammountEl.addEventListener("input", calculate);
 
 exchange.addEventListener("click", () => {
