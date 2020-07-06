@@ -2,6 +2,14 @@ import { getRatesSourceByDate } from "../services/currency-service.js"
 
 let currentRatesSource = {}
 
+const ctx = document.getElementById('myChart').getContext('2d');
+
+const myLineChart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: options
+});
+
 const from_currencyEl = document.getElementById("from_currency");
 const datesSelect = document.getElementById("dates");
 const from_ammountEl = document.getElementById("from_ammount");
@@ -26,6 +34,7 @@ datesSelect.addEventListener("change", function datesChangeHandler( {target: dat
 
   getRatesSourceByDate(date.value).then(source => {
     currentRatesSource = source;
+    console.log(currentRatesSource);
   });
 
 
