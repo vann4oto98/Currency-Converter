@@ -22,8 +22,8 @@ export function init() {
 
             if (!datesArray.includes(currentDate)) {
                 requester.post("appdata", "dates", {
-                    added_date: currentDate
-                }, "Kinvey")
+                        added_date: currentDate
+                    }, "Kinvey")
                     .then(response => {
 
                     }).catch(console.error);
@@ -32,11 +32,13 @@ export function init() {
                     .then(response => response.json())
                     .then(data => {
                         requester.post("appdata", "rates", {
-                            date: currentDate,
-                            rates: data.rates
-                        }, "Kinvey")
+                                date: currentDate,
+                                rates: data.rates
+                            }, "Kinvey")
                             .then(response => {
+                                data.rates['EUR'] = 1;
                                 mainRatesSource.rates = data.rates;
+
                                 domInit(mainRatesSource);
                             })
                             .catch(console.error);
@@ -45,6 +47,7 @@ export function init() {
             } else {
                 getRatesByDate(currentDate)
                     .then(data => {
+                        data[0].rates['EUR'] = 1;
                         mainRatesSource.rates = data[0].rates;
                         domInit(mainRatesSource);
                     });
@@ -58,4 +61,17 @@ function getRatesByDate(date) {
 
     return requester.get("appdata", "rates", "Kinvey", `?query={"date":"${date}"}`);
 
+}
+
+export function getRatesSourceByDate(date) {
+
+    const ratesSource = {
+        date
+    };
+
+    return getRatesByDate(date)
+        .then(x => {
+            ratesSource.rates = x[0].rates;
+            return ratesSource;
+        });
 }

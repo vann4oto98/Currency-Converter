@@ -1,3 +1,7 @@
+import { getRatesSourceByDate } from "../services/currency-service.js"
+
+let currentRatesSource = {}
+
 const from_currencyEl = document.getElementById("from_currency");
 const datesSelect = document.getElementById("dates");
 const from_ammountEl = document.getElementById("from_ammount");
@@ -18,7 +22,19 @@ exchange.addEventListener("click", () => {
   calculate();
 });
 
+datesSelect.addEventListener("change", function datesChangeHandler( {target: date} ) {
+
+  (getRatesSourceByDate(date.value)).then(source => {
+    currentRatesSource = source;
+  });
+
+
+  calculate();
+})
+
 export function domInit(mainRatesSource) {
+
+  currentRatesSource = {date: mainRatesSource.chosenDate, rates: mainRatesSource.rates}
   const rateNames = makeRatesOptionElements(mainRatesSource);
   const rateNamesCopy = rateNames.cloneNode(true);
   from_currencyEl.appendChild(rateNames);
@@ -28,8 +44,8 @@ export function domInit(mainRatesSource) {
 }
 
 function calculate() {
-  let dataRateFrom = from_currencyEl.options[from_currencyEl.selectedIndex].getAttribute('data-rate');
-  let dataRateTo = to_currencyEl.options[to_currencyEl.selectedIndex].getAttribute('data-rate');
+  let dataRateFrom = currentRatesSource.rates[from_currencyEl.options[from_currencyEl.selectedIndex].value];
+  let dataRateTo = currentRatesSource.rates[to_currencyEl.options[to_currencyEl.selectedIndex].value];
   let from_currencyName = from_currencyEl.options[from_currencyEl.selectedIndex].value;
   let to_currencyName = to_currencyEl.options[to_currencyEl.selectedIndex].value;
 
@@ -48,7 +64,6 @@ function makeRatesOptionElements(mainRatesSource) {
   ratesArray.forEach((x) => {
     const option = document.createElement("option");
     option.value = x;
-    option.setAttribute("data-rate", mainRatesSource.rates[x]);
     option.innerHTML = x;
     fragment.appendChild(option);
   });
