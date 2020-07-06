@@ -24,7 +24,7 @@ exchange.addEventListener("click", () => {
 
 datesSelect.addEventListener("change", function datesChangeHandler( {target: date} ) {
 
-  (getRatesSourceByDate(date.value)).then(source => {
+  getRatesSourceByDate(date.value).then(source => {
     currentRatesSource = source;
   });
 

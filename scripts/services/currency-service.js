@@ -72,6 +72,7 @@ export function getRatesSourceByDate(date) {
     return getRatesByDate(date)
         .then(x => {
             ratesSource.rates = x[0].rates;
+            ratesSource.rates['EUR'] = 1;
             return ratesSource;
         });
 }
