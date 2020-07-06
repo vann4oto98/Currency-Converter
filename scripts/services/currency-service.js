@@ -76,3 +76,22 @@ export function getRatesSourceByDate(date) {
             return ratesSource;
         });
 }
+
+export function getTheLastTenRates (){
+
+    return requester.get("appdata", "rates", "Kinvey", `?query={}&sort={"age": -1}&limit=4`)
+        .then(allDates => {
+
+            const finalRates = allDates.map(x => {
+                x.rates['EUR'] = 1;
+                return {date: x.date, rates: x.rates}
+            });
+
+            finalRates.sort((a, b) => {
+                return a.date.localeCompare(b.date);
+            });
+            
+            return finalRates;
+        })
+
+}
