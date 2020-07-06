@@ -1,7 +1,7 @@
 * {
   font-size: 18px;
   box-sizing: border-box;
-  font-family: "Apple Chancery", cursive;
+  font-family: "Times New Roman", Times, serif, cursive;
 }
 
 body {
@@ -12,7 +12,6 @@ body {
     #50dcff 54%,
     #50dcff 95%
   );
-  font-family: "Avantgarde", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,12 +20,12 @@ body {
   margin: 0;
 }
 
-#main-heading {
+/* #main-heading {
   font-size: 30px;
-  margin: 30px;
+  margin-top: 50px;
   vertical-align: middle;
   text-align: center;
-}
+} */
 
 .currency {
   display: flex;
@@ -35,6 +34,7 @@ body {
 }
 
 .date {
+  margin-top: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,34 +114,144 @@ input:focus,
 button:focus {
   outline: 0;
 }
+/* test nav */
 
-/* Add a black background color to the top navigation */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.topnav {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  margin-left: 25px;
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+
+  color: #03e9f4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+}
+a:hover {
+  background: #03e9f4;
+  color: #050801;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+a:nth-child(1) {
+  filter: hue-rotate(270deg);
+}
+a:nth-child(2) {
+  filter: hue-rotate(110deg);
+}
+a span {
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+/* Add a black background color to the top navigation
 .topnav {
   background-color: rgba(120, 65, 209, 0.404);
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+/* .topnav a {
   float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-}
+} */
 
 /* Change the color of links on hover */
-.topnav a:hover {
+/* .topnav a:hover {
   background-color: #ddd;
   color: black;
-}
+} */
 
 /* Add a color to the active/current link */
-.topnav a.active {
+/* .topnav a.active {
   background-color: #f59300;
   color: white;
-}
+}  */
 
 .definition {
   width: 50%;
@@ -151,26 +261,6 @@ button:focus {
 }
 
 /* Table  */
-th {
-  background-color: #4caf50;
-  color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 15px;
-}
 
 /* about */
 
