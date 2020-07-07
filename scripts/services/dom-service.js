@@ -18,6 +18,8 @@ let chart = new Chart(ctx, {
     title: {
       display: true,
       text: "Last 10 Days",
+      fontSize: 14,
+      fontColor: "rgba(255, 255, 255, 0.8)",
     },
     scales: {
       yAxes: [
@@ -25,6 +27,14 @@ let chart = new Chart(ctx, {
           ticks: {
             precision: 5,
             stepSize: 0.0025,
+            fontColor: "rgba(255, 255, 255, 0.8)",
+          },
+        },
+      ],
+      xAxes: [
+        {
+          ticks: {
+            fontColor: "rgba(255, 255, 255, 0.8)",
           },
         },
       ],
@@ -147,6 +157,8 @@ function makeChart() {
   const currencyRatesArray = [];
   const currencyLabelsArray = [];
 
+  console.log(lastDatesRates);
+
   lastDatesRates.forEach((x) => {
     currencyLabelsArray.push(x.date);
     let dataRateFrom =
@@ -167,6 +179,11 @@ function makeChart() {
     label: `${from_currencyEl.options[from_currencyEl.selectedIndex].value} - ${
       to_currencyEl.options[to_currencyEl.selectedIndex].value
     }`,
+
+    fillColor: "rgba(159,170,174,0.8)",
+    
+    borderColor: "rgba(255, 255, 255, 0.8)",
+    pointRadius: 5,
     backgroundColor: [
       "purple",
       "purple",
@@ -189,11 +206,6 @@ function makeChart() {
   chart.update();
 }
 
-function addData(chart, label, data) {
-  chart.data.labels = label;
-  chart.data.datasets[0] = data;
-  chart.update();
-}
 
 function removeData(chart) {
   chart.data.labels = [];
