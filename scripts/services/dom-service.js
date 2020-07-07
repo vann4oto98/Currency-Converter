@@ -167,6 +167,18 @@ function makeChart() {
     label: `${from_currencyEl.options[from_currencyEl.selectedIndex].value} - ${
       to_currencyEl.options[to_currencyEl.selectedIndex].value
     }`,
+    backgroundColor: [
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+      "purple",
+    ],
   };
 
   chart.data.datasets[0] = dataset;
@@ -175,9 +187,6 @@ function makeChart() {
   });
 
   chart.update();
-
-  console.log(currencyLabelsArray);
-  console.log(currencyRatesArray);
 }
 
 function addData(chart, label, data) {
