@@ -1,101 +1,98 @@
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Currency Converter</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!--Navigation-->
     <div class="topnav">
-      <a id="converterNav" class="active">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Converter</a
-      >
-      <a id="currencyRatesNav">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Currency rates</a
-      >
-      <a id="aboutNav">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>About</a
-      >
+        <a id="converterNav" class="active">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Converter
+        </a>
+        <a id="currencyRatesNav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span> Currency rates</a>
+        <a id="aboutNav">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>About</a>
     </div>
     <!---->
     <div id="currencyRatesDiv" style="display: none;">
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div id="aboutDiv" style="display: none;">
-      <p>
-        In finance, an exchange rate is the rate at which one currency will be
-        exchanged for another. It is also regarded as the value of one country's
-        currency in relation to another currency.
-      </p>
-      <p id="devCampPar">This is a DevCamp mini project.</p>
+        <p id="devCampPar">This is a DevCamp mini project.</p>
+        <p id="devCampDesc">
+            In finance, an exchange rate is the rate at which one currency will be exchanged for another. It is also regarded as the value of one country's currency in relation to another currency.
+        </p>
     </div>
     <div id="converter" class="container">
-      <div class="date">
-        <h2>Select а date:</h2>
-        <select name="dates" id="dates"> </select>
-      </div>
-      <div class="currency">
-        <select id="from_currency"> </select>
-        <input type="number" id="from_ammount" placeholder="0" value="1" />
-      </div>
-      <div class="middle">
-        <button id="exchange">
+        <div class="date">
+            <h2>Select а date:</h2>
+            <select name="dates" id="dates"> </select>
+        </div>
+        <div class="currency">
+            <select id="from_currency"> </select>
+            <input type="number" id="from_ammount" placeholder="0" value="1" />
+        </div>
+        <div class="middle">
+            <button id="exchange">
           <i class="fas fa-exchange-alt"></i>
         </button>
-        <div class="rate" id="rate"></div>
-      </div>
-      <div class="currency">
-        <select id="to_currency"> </select>
-        <input type="number" disabled id="to_ammount" placeholder="0" />
-      </div>
-      <div class="chart">
-        <canvas id="myChart" width="800" height="300"></canvas>
-      </div>
+            <div class="rate" id="rate"></div>
+        </div>
+        <div class="currency">
+            <select id="to_currency"> </select>
+            <input type="number" disabled id="to_ammount" placeholder="0" />
+        </div>
+        <div class="chart">
+            <canvas id="myChart" width="800" height="300"></canvas>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="copyright"> © Copyright 2020. All Rights Reserved.</p>
     </div>
 
     <script src="scripts/app.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-  </body>
+</body>
+
 </html>
