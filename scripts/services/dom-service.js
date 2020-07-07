@@ -1,35 +1,35 @@
 import {
   getRatesSourceByDate,
-  getTheLastTenRates
-} from "../services/currency-service.js"
+  getTheLastTenRates,
+} from "../services/currency-service.js";
 
-let currentRatesSource = {}
+let currentRatesSource = {};
 let lastDatesRates = [];
 
-let ctx = document.getElementById('myChart').getContext('2d');
-
+let ctx = document.getElementById("myChart").getContext("2d");
 
 let chart = new Chart(ctx, {
-  type: 'line',
+  type: "line",
   data: {
-
     labels: [],
     datasets: [],
   },
   options: {
     title: {
       display: true,
-      text: 'Last 10 Days'
+      text: "Last 10 Days",
     },
     scales: {
-      yAxes: [{
-        ticks: {
-          precision: 5,
-          stepSize: 0.0025
-        }
-      }]
-    }
-  }
+      yAxes: [
+        {
+          ticks: {
+            precision: 5,
+            stepSize: 0.0025,
+          },
+        },
+      ],
+    },
+  },
 });
 
 const from_currencyEl = document.getElementById("from_currency");
@@ -40,9 +40,15 @@ const to_ammountEl = document.getElementById("to_ammount");
 const rateEl = document.getElementById("rate");
 const exchange = document.getElementById("exchange");
 
-from_currencyEl.addEventListener("change", () => {calculate(); makeChart();});
+from_currencyEl.addEventListener("change", () => {
+  calculate();
+  makeChart();
+});
 from_ammountEl.addEventListener("input", calculate);
-to_currencyEl.addEventListener("change", () => {calculate(); makeChart();});
+to_currencyEl.addEventListener("change", () => {
+  calculate();
+  makeChart();
+});
 to_ammountEl.addEventListener("input", calculate);
 
 exchange.addEventListener("click", () => {
@@ -54,45 +60,53 @@ exchange.addEventListener("click", () => {
 });
 
 datesSelect.addEventListener("change", function datesChangeHandler({
-  target: date
+  target: date,
 }) {
-
-  getRatesSourceByDate(date.value).then(source => {
+  getRatesSourceByDate(date.value).then((source) => {
     currentRatesSource = source;
   });
 
-
   calculate();
-})
+});
 
 export function domInit(mainRatesSource) {
-
   currentRatesSource = {
     date: mainRatesSource.chosenDate,
-    rates: mainRatesSource.rates
-  }
+    rates: mainRatesSource.rates,
+  };
   const rateNames = makeRatesOptionElements(mainRatesSource);
   const rateNamesCopy = rateNames.cloneNode(true);
   from_currencyEl.appendChild(rateNames);
   to_currencyEl.appendChild(rateNamesCopy);
   datesSelect.appendChild(makeDatesOptionElements(mainRatesSource));
-  getTheLastTenRates().then(x => {
+  getTheLastTenRates().then((x) => {
     lastDatesRates = x;
     makeChart();
   });
   calculate();
-
+  fillTable();
 }
 
 function calculate() {
-  let dataRateFrom = currentRatesSource.rates[from_currencyEl.options[from_currencyEl.selectedIndex].value];
-  let dataRateTo = currentRatesSource.rates[to_currencyEl.options[to_currencyEl.selectedIndex].value];
-  let from_currencyName = from_currencyEl.options[from_currencyEl.selectedIndex].value;
-  let to_currencyName = to_currencyEl.options[to_currencyEl.selectedIndex].value;
+  let dataRateFrom =
+    currentRatesSource.rates[
+      from_currencyEl.options[from_currencyEl.selectedIndex].value
+    ];
+  let dataRateTo =
+    currentRatesSource.rates[
+      to_currencyEl.options[to_currencyEl.selectedIndex].value
+    ];
+  let from_currencyName =
+    from_currencyEl.options[from_currencyEl.selectedIndex].value;
+  let to_currencyName =
+    to_currencyEl.options[to_currencyEl.selectedIndex].value;
 
-
-  rateEl.textContent = `1 ${from_currencyName} = ${parseFloat(((1 / dataRateFrom) * dataRateTo).toFixed(4))} ${to_currencyName}`;
-  to_ammountEl.value = parseFloat(((from_ammountEl.value / dataRateFrom) * dataRateTo).toFixed(4));
+  rateEl.textContent = `1 ${from_currencyName} = ${parseFloat(
+    ((1 / dataRateFrom) * dataRateTo).toFixed(4)
+  )} ${to_currencyName}`;
+  to_ammountEl.value = parseFloat(
+    ((from_ammountEl.value / dataRateFrom) * dataRateTo).toFixed(4)
+  );
 }
 
 function makeRatesOptionElements(mainRatesSource) {
@@ -130,39 +144,40 @@ function makeDatesOptionElements(mainRatesSource) {
 }
 
 function makeChart() {
-
-  
   const currencyRatesArray = [];
   const currencyLabelsArray = [];
 
-  lastDatesRates.forEach(x => {
+  lastDatesRates.forEach((x) => {
     currencyLabelsArray.push(x.date);
-    let dataRateFrom = x.rates[from_currencyEl.options[from_currencyEl.selectedIndex].value];
-    let dataRateTo = x.rates[to_currencyEl.options[to_currencyEl.selectedIndex].value];
-    currencyRatesArray.push(Number(parseFloat(((1 / dataRateFrom) * dataRateTo).toFixed(4))));
+    let dataRateFrom =
+      x.rates[from_currencyEl.options[from_currencyEl.selectedIndex].value];
+    let dataRateTo =
+      x.rates[to_currencyEl.options[to_currencyEl.selectedIndex].value];
+    currencyRatesArray.push(
+      Number(parseFloat(((1 / dataRateFrom) * dataRateTo).toFixed(4)))
+    );
   });
 
   removeData(chart);
-  
-  
-  const dataset= {
+
+  const dataset = {
     data: currencyRatesArray,
     showLine: true,
     fill: true,
-    label: `${from_currencyEl.options[from_currencyEl.selectedIndex].value} - ${to_currencyEl.options[to_currencyEl.selectedIndex].value}`
+    label: `${from_currencyEl.options[from_currencyEl.selectedIndex].value} - ${
+      to_currencyEl.options[to_currencyEl.selectedIndex].value
+    }`,
   };
 
   chart.data.datasets[0] = dataset;
-  currencyLabelsArray.forEach(x => {chart.data.labels.push(x);})
-
+  currencyLabelsArray.forEach((x) => {
+    chart.data.labels.push(x);
+  });
 
   chart.update();
 
   console.log(currencyLabelsArray);
   console.log(currencyRatesArray);
-
-
-
 }
 
 function addData(chart, label, data) {
@@ -174,7 +189,27 @@ function addData(chart, label, data) {
 function removeData(chart) {
   chart.data.labels = [];
   chart.data.datasets.forEach((dataset) => {
-      dataset.data.pop();
+    dataset.data.pop();
   });
   chart.update();
+}
+
+//Table logic
+
+const table = document.getElementById("table");
+
+function fillTable() {
+  let td = table.querySelectorAll("td");
+
+  let count = 0;
+  for (const [key, value] of Object.entries(currentRatesSource.rates)) {
+    setInterval(function () {
+      if (count < td.length) {
+        td[count++].textContent = key;
+        td[count++].textContent = value;
+      } else {
+        count = 0;
+      }
+    }, 5000);
+  }
 }
