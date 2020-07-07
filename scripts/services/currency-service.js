@@ -79,7 +79,7 @@ export function getRatesSourceByDate(date) {
 
 export function getTheLastTenRates (){
 
-    return requester.get("appdata", "rates", "Kinvey", `?query={}&sort={"date": -1}&limit=4`)
+    return requester.get("appdata", "rates", "Kinvey", `?query={}&sort={"date": -1}&limit=5`)
         .then(allDates => {
 
             const finalRates = allDates.map(x => {
