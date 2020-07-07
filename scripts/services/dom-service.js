@@ -157,8 +157,6 @@ function makeChart() {
   const currencyRatesArray = [];
   const currencyLabelsArray = [];
 
-  console.log(lastDatesRates);
-
   lastDatesRates.forEach((x) => {
     currencyLabelsArray.push(x.date);
     let dataRateFrom =
