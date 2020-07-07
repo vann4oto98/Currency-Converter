@@ -241,5 +241,5 @@ function fillTable() {
     if (arrayCounter == 32) {
       arrayCounter = 0;
     }
-  }, 1000);
+  }, 2000);
 }
