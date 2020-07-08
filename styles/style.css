@@ -1,271 +1,268 @@
 * {
-  font-size: 18px;
-  box-sizing: border-box;
-  font-family: 'Oxanium', cursive;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive;
 }
 
 body {
-  /*background: linear-gradient(
+    /*background: linear-gradient(
     to bottom,
     #aff2ff 0%,
     #aff2ff 46%,
     #50dcff 54%,
     #50dcff 95%
   );*/
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  /*background-image: url(gif.gif);*/
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(0, 0, 0, 0.6) 100%
-    ),
-    url("gif.gif");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /*background-image: url(gif.gif);*/
+    background: linear-gradient( to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url("gif.gif");
 }
 
 h2 {
-  color: white;
+    color: white;
 }
 
 .currency {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .date {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .date select {
-  width: 150px;
-  height: 40px;
-  margin: 10px;
-  border: 2px solid purple;
+    width: 150px;
+    height: 40px;
+    margin: 10px;
+    border: 2px solid purple;
 }
 
 .currency select {
-  background: transparent;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.2em top 50%, 0 0;
-  background-size: 0.5em auto, 100%;
-  border: 0;
-  padding-right: 20px;
-  font-size: 22px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.2em top 50%, 0 0;
+    background-size: 0.5em auto, 100%;
+    border: 0;
+    padding-right: 20px;
+    font-size: 22px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .currency input {
-  border: 2px solid black;
-  border-radius: 20px;
-  padding: 5px;
-  margin-left: 10px;
-  background: transparent;
-  font-size: 22px;
-  text-align: right;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 10px;
+    background: transparent;
+    font-size: 22px;
+    text-align: right;
 }
 
 .middle {
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .middle button {
-  background-color: #fff;
-  border: 2px solid #ecf0f1;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  width: 30px;
-  transform: rotate(90deg);
+    background-color: #fff;
+    border: 2px solid #ecf0f1;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    transform: rotate(90deg);
 }
 
 .middle button:active {
-  transform: rotate(90deg) scale(0.9);
+    transform: rotate(90deg) scale(0.9);
 }
 
 .middle .rate {
-  background-color: #fff;
-  border: 2px solid #ecf0f1;
-  border-radius: 50px;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 30px;
-  padding: 0 10px;
-  margin: 30px 15px 30px 25px;
+    background-color: #fff;
+    border: 2px solid #ecf0f1;
+    border-radius: 50px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 10px;
+    margin: 30px 15px 30px 25px;
 }
 
 select:focus,
 input:focus,
 button:focus {
-  outline: 0;
+    outline: 0;
 }
+
 
 /* test nav */
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 .topnav {
-  position: fixed;
-  /* Set the navbar to fixed position */
-  top: 0;
-  /* Position the navbar at the top of the page */
-  margin-left: 25px;
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    margin-left: 25px;
 }
 
 a {
-  position: relative;
-  display: inline-block;
-  padding: 25px 30px;
-  color: #03e9f4;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: 0.5s;
-  letter-spacing: 4px;
-  overflow: hidden;
-  margin-right: 50px;
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
 }
 
 a:hover {
-  background: #03e9f4;
-  color: #050801;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 200px #03e9f4;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
 
 a:nth-child(1) {
-  filter: hue-rotate(270deg);
+    filter: hue-rotate(270deg);
 }
 
 a:nth-child(2) {
-  filter: hue-rotate(110deg);
+    filter: hue-rotate(110deg);
 }
 
 a span {
-  position: absolute;
-  display: block;
+    position: absolute;
+    display: block;
 }
 
 a span:nth-child(1) {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: animate1 1s linear infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
 }
 
 @keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 100%;
+    }
 }
 
 a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: animate2 1s linear infinite;
-  animation-delay: 0.25s;
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
 }
 
 @keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 100%;
+    }
 }
 
 a span:nth-child(3) {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: animate3 1s linear infinite;
-  animation-delay: 0.5s;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
 }
 
 @keyframes animate3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 100%;
+    }
 }
 
 a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: animate4 1s linear infinite;
-  animation-delay: 0.75s;
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
 }
 
 @keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,
-  100% {
-    bottom: 100%;
-  }
+    0% {
+        bottom: -100%;
+    }
+    50%,
+    100% {
+        bottom: 100%;
+    }
 }
 
+
 /* Table  */
+
 
 /* about */
 
 #aboutDiv {
-  text-shadow: 2px 2px 5px #03e9f4;
-  color: white;
-  text-align: center;
+    text-shadow: 2px 2px 5px #03e9f4;
+    color: white;
+    text-align: center;
 }
 
 #devCampDesc {
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-right: 250px;
-  margin-left: 320px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    margin-right: 250px;
+    margin-left: 320px;
 }
 
 #devCampPar {
-  margin-top: 50px;
-  margin-bottom: 300px;
-  margin-right: 250px;
-  margin-left: 320px;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    margin-right: 250px;
+    margin-left: 320px;
 }
 
 #from_currency,
@@ -274,69 +271,71 @@ a span:nth-child(4) {
 #to_ammount,
 #rate,
 #exchange {
-  background-color: white;
-  border: 2px solid purple;
-  border-radius: 30px;
-  padding-left: 5px;
+    background-color: white;
+    border: 2px solid purple;
+    border-radius: 30px;
+    padding-left: 5px;
 }
 
 #rate,
 #exchange {
-  background-color: #8ae01f;
+    background-color: #8ae01f;
 }
 
 .copyright {
-  font-weight: bold;
-  color: black;
-  font-size: 0.75rem;
-  padding: 5px 0;
-  margin: 0;
+    font-weight: bold;
+    color: black;
+    font-size: 0.75rem;
+    padding: 5px 0;
+    margin: 0;
 }
 
 #footer {
-  background-color: #ccccff;
-  text-align: center;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
+    background-color: #ccccff;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 #currencyRatesDiv {
-  margin-bottom: 60px;
-  opacity: 0.9;
+    margin-bottom: 60px;
+    opacity: 0.9;
 }
 
 table {
-  width: 750px;
-  border-collapse: collapse;
-  margin: 50px auto;
+    width: 750px;
+    border-collapse: collapse;
+    margin: 50px auto;
 }
+
 
 /* Zebra striping */
 
 tr:nth-of-type(odd) {
-  background: #eee;
+    background: #eee;
 }
 
 tr:nth-of-type(even) {
-  background: #cc66cc;
+    background: #cc66cc;
 }
 
 th {
-  background: purple;
-  color: white;
-  font-weight: bold;
+    background: purple;
+    color: white;
+    font-weight: bold;
 }
 
 td,
 th {
-  padding: 10px;
-  border: 1px solid #ccc;
-  text-align: left;
-  font-size: 18px;
-  font-weight: bolder;
-  font-style: oblique;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bolder;
+    font-style: oblique;
 }
+
 
 /* 
 Max width before this PARTICULAR table gets nasty
@@ -345,47 +344,47 @@ and also iPads specifically.
 */
 
 @media only screen and (max-width: 760px),
-  (min-device-width: 768px) and (max-device-width: 1024px) {
-  table {
-    width: 100%;
-  }
-  /* Force table to not be like tables anymore */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr {
-    border: 1px solid #ccc;
-  }
-  td {
-    /* Behave  like a "row" */
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 50%;
-  }
-  td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 6px;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-    /* Label the data */
-    content: attr(data-column);
-    color: #000;
-    font-weight: bold;
-  }
+(min-device-width: 768px) and (max-device-width: 1024px) {
+    table {
+        width: 100%;
+    }
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        /* Label the data */
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+    }
 }
