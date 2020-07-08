@@ -435,7 +435,7 @@ and also iPads specifically.
     left: 0;
   }
   to {
-    left: 680px;
+    left: 600px;
   }
 }
 
@@ -444,7 +444,7 @@ and also iPads specifically.
     top: 0;
   }
   to {
-    top: 120px;
+    top: 100px;
   }
 }
 @-moz-keyframes moveY {
@@ -452,7 +452,7 @@ and also iPads specifically.
     top: 0;
   }
   to {
-    top: 120px;
+    top: 100px;
   }
 }
 @-o-keyframes moveY {
@@ -460,7 +460,7 @@ and also iPads specifically.
     top: 0;
   }
   to {
-    top: 120px;
+    top: 100px;
   }
 }
 @keyframes moveY {
@@ -468,7 +468,7 @@ and also iPads specifically.
     top: 0;
   }
   to {
-    top: 120px;
+    top: 100px;
   }
 }
 
