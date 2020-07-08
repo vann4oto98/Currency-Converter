@@ -257,5 +257,5 @@ function fillTable() {
     } else {
       arrayCounter = 0;
     }
-  }, 2000);
+  }, 5000);
 }
