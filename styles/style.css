@@ -472,13 +472,11 @@ and also iPads specifically.
   }
 }
 
-.team {
-}
-
 img {
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 150px;
   padding: 10px;
+  object-fit: cover;
 }
 
 span {
