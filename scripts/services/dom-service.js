@@ -179,7 +179,7 @@ function makeChart() {
     }`,
 
     fillColor: "rgba(159,170,174,0.8)",
-    
+
     borderColor: "rgba(255, 255, 255, 0.8)",
     pointRadius: 5,
     backgroundColor: [
@@ -203,7 +203,6 @@ function makeChart() {
 
   chart.update();
 }
-
 
 function removeData(chart) {
   chart.data.labels = [];
@@ -229,35 +228,33 @@ function fillTable() {
 
   let arrayCounter = 0;
   setInterval(function () {
-    if (count < td.length) {
-      td[count++].textContent = objectArray[arrayCounter++].key;
+    if (arrayCounter < 32) {
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
 
-      td[count++].textContent = objectArray[arrayCounter++].key;
+      td[count++].textContent = objectArray[arrayCounter].key;
       td[count++].textContent = objectArray[arrayCounter++].value;
-    } else {
+
       count = 0;
-    }
-
-    if (arrayCounter == 32) {
+    } else {
       arrayCounter = 0;
     }
   }, 2000);
