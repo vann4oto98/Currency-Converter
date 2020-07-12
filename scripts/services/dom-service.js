@@ -17,7 +17,7 @@ let chart = new Chart(ctx, {
   options: {
     title: {
       display: true,
-      text: "Currency Rate For The Last 5 Days",
+      text: "Currency Rate For The Last 10 Days",
       fontSize: 14,
       fontColor: "rgba(255, 255, 255, 0.8)",
     },
