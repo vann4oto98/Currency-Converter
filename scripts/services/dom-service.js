@@ -74,9 +74,9 @@ datesSelect.addEventListener("change", function datesChangeHandler({
 }) {
   getRatesSourceByDate(date.value).then((source) => {
     currentRatesSource = source;
+    calculate();
   });
 
-  calculate();
 });
 
 export function domInit(mainRatesSource) {
