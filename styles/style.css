@@ -1,7 +1,7 @@
 * {
   font-size: 18px;
   box-sizing: border-box;
-  font-family: 'Oxanium', cursive;
+  font-family: "Oxanium", cursive;
 }
 
 body {
@@ -255,7 +255,7 @@ a span:nth-child(4) {
 }
 
 #devCampDesc {
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 100px;
   margin-right: 250px;
   margin-left: 320px;
@@ -263,7 +263,7 @@ a span:nth-child(4) {
 
 #devCampPar {
   margin-top: 50px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   margin-right: 250px;
   margin-left: 320px;
 }
@@ -387,5 +387,121 @@ and also iPads specifically.
     content: attr(data-column);
     color: #000;
     font-weight: bold;
+  }
+}
+
+/* ABOUT BUTTON GAME */
+
+/*Table animation */
+.tableFun {
+  position: absolute;
+  -webkit-animation: moveX 5s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  -moz-animation: moveX 5s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  -o-animation: moveX 5s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+  animation: moveX 5s linear 0s infinite alternate,
+    moveY 3.4s linear 0s infinite alternate;
+
+  @-webkit-keyframes moveX {
+    from {
+      left: 0;
+    }
+    to {
+      left: 180px;
+    }
+  }
+}
+
+@-moz-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 180px;
+  }
+}
+@-o-keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 140px;
+  }
+}
+@keyframes moveX {
+  from {
+    left: 0;
+  }
+  to {
+    left: 600px;
+  }
+}
+
+@-webkit-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}
+@-moz-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}
+@-o-keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}
+@keyframes moveY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 100px;
+  }
+}
+
+img {
+  width: 100px;
+  height: 150px;
+  padding: 10px;
+  object-fit: cover;
+}
+
+span {
+  display: inline-block;
+  animation: 1s bounce infinite;
+}
+
+.team span:nth-child(2) {
+  animation-delay: 0.65s;
+}
+
+.team span:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.team span:last-child {
+  animation-delay: 1.8s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-45px);
   }
 }
