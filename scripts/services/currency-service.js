@@ -70,8 +70,13 @@ function getRatesByDate(date) {
 
 function fillPreviousDates(latestDate, currentDate) {
 
+    const postLatestDate = getDateWithDaysDifference(latestDate, 1);
+
+    if(postLatestDate === currentDate) {
+        return Promise.resolve([]);
+    }
+
     const preCurrentDate = getDateWithDaysDifference(currentDate, -1);
-    const postLatestDate = getDateWithDaysDifference(latestDate, 1)
 
 
     return fetch(`https://api.exchangeratesapi.io/history?start_at=${postLatestDate}&end_at=${preCurrentDate}`)
