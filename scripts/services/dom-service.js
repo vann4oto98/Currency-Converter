@@ -49,6 +49,7 @@ const to_currencyEl = document.getElementById("to_currency");
 const to_ammountEl = document.getElementById("to_ammount");
 const rateEl = document.getElementById("rate");
 const exchange = document.getElementById("exchange");
+const loader = document.getElementById("loader");
 
 from_currencyEl.addEventListener("change", () => {
   calculate();
@@ -95,6 +96,7 @@ export function domInit(mainRatesSource) {
   });
   calculate();
   fillTable();
+  loader.style.display = "none";
 }
 
 function calculate() {
